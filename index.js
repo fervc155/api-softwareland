@@ -20,4 +20,14 @@ app.use( express.static('uploads') );
 
 
 app.use('/', routes() );
-app.listen(process.env.PORT);
+
+
+// Arrancar la app
+
+
+// Puerto de la app
+const port = process.env.PORT || 4000;
+
+app.listen(port, '0.0.0.0', () => {
+    console.log(`El servidor esta funcionando en el puerto ${port}`);
+})
